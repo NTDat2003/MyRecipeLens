@@ -1,4 +1,5 @@
 import React from "react";
+import { StyleSheet, Text, View } from 'react-native';
 import * as Localization from "expo-localization";
 import { i18n, Language } from "@/Localization";
 import { NativeBaseProvider } from "native-base";
@@ -17,6 +18,7 @@ export default function App() {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <ApplicationNavigator />
+          <Text>Hello</Text>
         </PersistGate>
       </Provider>
     </NativeBaseProvider>
