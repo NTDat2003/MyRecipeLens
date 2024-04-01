@@ -6,15 +6,17 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { HomeContainer } from "@/Screens/Home";
 // import { WelcomeContainer } from "@/Screens/Welcome";
 import { Onboarding_0 } from "@/Screens/Onboarding_0"
-import { Onboarding_1 } from "@/Screens/Onboarding_1";
+import { Onboarding_1, Onboarding_2 } from "@/Screens/Onboarding_1";
 import { Welcome } from "@/Screens/Welcome";
 import { RootScreens } from "@/Screens";
+// import { Onboarding_2 } from "@/Screens/Onboarding_1/Onboarding_2";
 
 export type RootStackParamList = {
   [RootScreens.MAIN]: undefined;
   [RootScreens.WELCOME]: undefined;
   [RootScreens.ONBOARDING_0]: undefined;
   [RootScreens.ONBOARDING_1]: undefined;
+  [RootScreens.ONBOARDING_2]: undefined;
 };
 // Create a native stack navigator
 const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -39,6 +41,10 @@ const ApplicationNavigator = () => {
           <RootStack.Screen
             name={RootScreens.ONBOARDING_1}
             component={Onboarding_1}
+          />
+          <RootStack.Screen
+            name={RootScreens.ONBOARDING_2}
+            component={Onboarding_2}
           />
           {/* <RootStack.Screen
             name={RootScreens.MAIN}

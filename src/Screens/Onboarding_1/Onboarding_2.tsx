@@ -1,22 +1,22 @@
-import * as React from 'react';
-import { View, Image, Text , StyleSheet, ImageBackground, Pressable} from 'react-native';
+import { Text, StyleSheet, View, ImageBackground, Pressable } from 'react-native'
+import React, { Component } from 'react'
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "@/Navigation";
 import { RootScreens } from "..";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useFonts } from "expo-font";
 // import assets
-import background from "assets/Background/Onboarding_1_cover.png";
+import background from "assets/Background/Onboarding_2_cover.png";
 import Poppins_SemiBold from "assets/Fonts/Poppins/Poppins-SemiBold.ttf";
 import Poppins_Regular from "assets/Fonts/Poppins/Poppins-Regular.ttf";
 import Poppins_Bold from "assets/Fonts/Poppins/Poppins-Bold.ttf";
 
-type Onboarding_1ScreenNavigatorProps = NativeStackScreenProps<
+type Onboarding_2ScreenNavigatorProps = NativeStackScreenProps<
   RootStackParamList,
-  RootScreens.ONBOARDING_1
+  RootScreens.ONBOARDING_2
 >;
 
-export const Onboarding_1 = ({navigation,} : Onboarding_1ScreenNavigatorProps) => {
+export const Onboarding_2 = ({navigation,} : Onboarding_2ScreenNavigatorProps) => {
     const [fontsLoaded] = useFonts({
         "Poppins_SemiBold": Poppins_SemiBold,
         "Poppins_Regular": Poppins_Regular,
@@ -28,23 +28,23 @@ export const Onboarding_1 = ({navigation,} : Onboarding_1ScreenNavigatorProps) =
         )
     }
     return (
-        <View style={styles.container_view}>
-            <ImageBackground source={background} resizeMode='cover' style={styles.background_image}>
-                <SafeAreaView style={styles.upper_background_view}>
-                    <Text style={styles.title_text}>Nhận diện dễ dàng</Text>
-                    <Text style={styles.body_text}>Nhập nhanh tất cả nguyên liệu</Text>
-                    <Text style={styles.body_text}>chỉ trong vài giây</Text>
-                </SafeAreaView>
-                <SafeAreaView style={styles.lower_background_view}>
-                    <Pressable onPress={() => navigation.navigate(RootScreens.ONBOARDING_0)}>
-                        <Text style={styles.skip_text}>Skip</Text>
-                    </Pressable>
-                    <Pressable onPress={() => navigation.navigate(RootScreens.ONBOARDING_2)}>
-                        <Text style={styles.next_text}>Tiếp theo</Text>
-                    </Pressable>
-                </SafeAreaView>
-            </ImageBackground>
-        </View>
+      <View style={styles.container_view}>
+        <ImageBackground source={background} resizeMode='cover' style={styles.background_image}>
+            <SafeAreaView style={styles.upper_background_view}>
+                <Text style={styles.title_text}>Đề xuất đa dạng</Text>
+                <Text style={styles.body_text}>Nhanh chóng - dinh dưỡng - tiện lợi</Text>
+                <Text style={styles.body_text}>Bạn cần gì, RecipeLens đều có hết</Text>
+            </SafeAreaView>
+            <SafeAreaView style={styles.lower_background_view}>
+                <Pressable onPress={() => navigation.navigate(RootScreens.ONBOARDING_0)}>
+                    <Text style={styles.skip_text}>Skip</Text>
+                </Pressable>
+                <Pressable onPress={() => navigation.navigate(RootScreens.ONBOARDING_2)}>
+                    <Text style={styles.next_text}>Tiếp theo</Text>
+                </Pressable>
+            </SafeAreaView>
+        </ImageBackground>
+      </View>
     );
 };
 
