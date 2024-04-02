@@ -1,4 +1,4 @@
-package com.exporeduxtemplate
+package com.hpcc.expo_redux_template
 
 import android.app.Application
 import android.content.res.Configuration

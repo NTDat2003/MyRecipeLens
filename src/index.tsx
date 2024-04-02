@@ -18,7 +18,7 @@ export default function App() {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <ApplicationNavigator />
-          <Text>Hello</Text>
+          {/* <Text>Hello</Text> */}
         </PersistGate>
       </Provider>
     </NativeBaseProvider>
